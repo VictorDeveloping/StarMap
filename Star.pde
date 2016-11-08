@@ -2,7 +2,7 @@ class Star{
 //Fields
 int habitable;
 String name;
-int distance;
+Float distance;
 int xg,yg,zg;
 float size;
   
@@ -10,11 +10,17 @@ float size;
 Star(TableRow row){
  name=row.getString(3);
  habitable=row.getInt(2);
- distance=row.getInt(12);
+ distance=row.getFloat(12);
  xg=row.getInt(13);
  yg=row.getInt(14);
  zg=row.getInt(15);
  size=row.getFloat(16);
  
 }
+
+ String toString() {
+        return  this.name + " "
+                + " " + this.habitable + " " + 
+                + this.distance + " " + this.xg + " " + this.yg + " "+ this.zg + " " + this.size;
+    }
 }
