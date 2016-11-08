@@ -18,9 +18,9 @@ Star(TableRow row){
  
 }
 
- String toString() {
-        return  this.name + " "
-                + " " + this.habitable + " " + 
-                + this.distance + " " + this.xg + " " + this.yg + " "+ this.zg + " " + this.size;
+ String toString(){
+        return  this.name + "\t"
+                + "\t" + this.habitable + "\t" + 
+                + this.distance + "\t" + this.xg + "\t" + this.yg + "\t"+ this.zg + "\t" + this.size;
     }
 }

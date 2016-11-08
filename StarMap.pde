@@ -2,13 +2,17 @@
 Table table;
 //Declare a global ArrayList of Star objects
 ArrayList<Star> stars_array = new ArrayList<Star>();
+float border;
 void setup(){
   size(800,800);
+  background(0);
    loadData();
    printStars();
+   border = 50;
    /*for(int i=0;i< stars_array.size();i++){
     println(stars_array.get(i).name + " is a at a distance of : " +stars_array.get(i).distance);
   }*/
+ 
 }
 //Write a method called loadData that loads the data from the file and populates the ArrayList. Call this from setup.
 void loadData(){
@@ -29,5 +33,18 @@ void printStars(){
       println(stars_array.get(i).toString());
   }
 }
+
+int widthSpace=50;
+int heightSpace=50;
 void draw(){
+  
+ for(int i=0; i<width; i+=80){
+   stroke(186,6,196);
+   line(i,0,i,height);
+ }
+ for(int w=0; w<height; w+=80){
+   stroke(186,6,196);
+   line(0,w,width,w);
+ }
+ 
 }
